@@ -32,7 +32,7 @@ app.get("/edit/:id", (req, res) => {
   res.sendFile(path.join(basePath, "pages/edit.html"));
 });
 app.get("/editstore/:id", (req, res) => {
-  res.sendFile(path.join(basePath, "pages/editStore.html"));
+  res.sendFile(path.join(basePath, "pages/editstore.html"));
 });
 
 app.get("/store", (req, res) => {
