@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taskinger</title>
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <script src="/static/js/edit.js" defer></script>
+  </head>
+  <body>
+    <div class="edit_header">
+      <a href="/">Go Back</a>
+      <h1>Edit task page</h1>
+    </div>
+
+    <!-- Add task form -->
+    <form action="" method="" id="update_task_form">
+      <div class="form_group">
+        <label for="title">title</label>
+        <input
+          type="text"
+          name="title"
+          id="title"
+          placeholder="Enter task title"
+        />
+      </div>
+
+      <div class="form_group">
+        <label for="imgUrl">imgUrl</label>
+        <input
+          type="text"
+          imgUrl="imgUrl"
+          id="imgUrl"
+          placeholder="Enter task imgUrl"
+        />
+      </div>
+
+      <div class="form_group">
+        <label for="description">description</label>
+        <textarea
+          name="description"
+          id="description"
+          cols="30"
+          rows="10"
+          placeholder="Enter task description"
+          maxlength="200"
+        ></textarea>
+      </div>
+
+      <div class="form_group checkbox_group">
+        <label for="completed">Completed</label
+        ><input type="checkbox" name="complete" id="completed" />
+      </div>
+
+      <div class="form_group">
+        <button type="submit">Save Task</button>
+      </div>
+    </form>
+  </body>
+</html>

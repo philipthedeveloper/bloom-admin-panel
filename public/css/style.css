@@ -1,0 +1,281 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial Narrow", sans-serif;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(to top, blue, darkblue, black);
+  background-attachment: fixed;
+  height: 100vh;
+  color: white;
+}
+
+body > * {
+  position: relative;
+  z-index: 4;
+}
+
+body::before,
+body::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    rgba(255, 255, 255, 0),
+    rgba(0, 0, 0, 0),
+    rgba(255, 0, 191, 0.5),
+    rgba(0, 0, 255, 0),
+    rgba(0, 0, 255, 0)
+  );
+}
+
+body::before {
+  clip-path: circle(20% at 20% 30%);
+}
+body::after {
+  clip-path: circle(20% at 80% 70%);
+}
+
+h1 {
+  color: rgb(255, 255, 255);
+  margin-top: 1rem;
+}
+
+form,
+.form_group {
+  width: 70%;
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+.form_group.checkbox_group {
+  flex-direction: row;
+  align-items: center;
+}
+
+.form_group.checkbox_group label {
+  margin-right: 0.4rem;
+}
+.form_group.checkbox_group input {
+  margin-top: -0.3rem;
+}
+
+.form_group label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  text-align: left;
+  text-transform: capitalize;
+  font-variant: small-caps;
+}
+
+.form_group input,
+.form_group button,
+.form_group textarea,
+.form_group select {
+  border-radius: 0.4rem;
+  padding: 0.8rem;
+  border: none;
+  outline: none;
+  font-family: "Arial Narrow";
+  resize: none;
+}
+
+.form_group button {
+  cursor: pointer;
+  background-color: rgb(133, 67, 195);
+  color: white;
+  transition: 0.5s ease;
+}
+
+.form_group button:hover {
+  color: white;
+  background-color: rgb(122, 53, 187);
+  box-shadow: inset -2px -2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.tasks,
+.products {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.tasks::-webkit-scrollbar {
+  appearance: none;
+  width: 10px;
+  background-color: #9bb4da83;
+  border-radius: 0.4rem;
+}
+
+.tasks::-webkit-scrollbar-thumb {
+  background-color: orangered;
+  border-radius: 0.4rem;
+}
+
+.task_card {
+  margin: auto;
+  width: 70%;
+  border-radius: 0.4rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 0.6rem 1rem;
+  margin-bottom: 0.8rem;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ffffff21 transparent transparent #ffffff21;
+  box-shadow: 1px 1px 6px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+}
+
+.task_card .title {
+  text-transform: capitalize;
+  font-variant: small-caps;
+  font-size: 1.2rem;
+}
+
+.task_card .description {
+  margin-top: 0.5rem;
+  text-transform: capitalize;
+  font-size: 0.9rem;
+  max-width: 300px;
+  color: rgba(243, 243, 243, 0.918);
+}
+
+.task_card .creation_date {
+  font-size: 0.7rem;
+  margin-top: 0.4rem;
+  color: rgba(206, 206, 206, 0.918);
+}
+.task_card .company {
+  font-size: 0.7rem;
+  margin-top: 0.4rem;
+  color: rgba(206, 206, 206, 0.918);
+}
+.task_card .imageUrl {
+  font-size: 0.7rem;
+  margin-top: 0.4rem;
+  color: rgba(206, 206, 206, 0.918);
+}
+
+.task_card aside {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  justify-content: space-around;
+}
+
+.task_card aside i {
+  cursor: pointer;
+}
+
+.task_card aside a {
+  text-decoration: none;
+  color: white;
+  transition: 0.4s;
+}
+
+.task_card aside a:hover {
+  color: blue;
+}
+
+.edit_header {
+  width: 49%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.edit_header h1 {
+  margin-top: 0;
+}
+
+#alertText {
+  width: 49%;
+  color: orangered;
+  font-size: 0.9rem;
+}
+
+@media screen and (max-width: 782px) {
+  .form_group {
+    width: 80%;
+  }
+
+  .task_card {
+    width: 80%;
+  }
+  .edit_header {
+    width: 56%;
+  }
+
+  #alertText {
+    width: 56%;
+  }
+}
+
+.delete_task {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: #fff;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 500px) {
+  h1 {
+    font-size: 1.7rem;
+  }
+
+  form {
+    width: 80%;
+  }
+  .form_group {
+    width: 100%;
+  }
+
+  .tasks {
+    width: 80%;
+  }
+
+  .task_card {
+    width: 100%;
+  }
+  .edit_header {
+    width: 80%;
+  }
+  #alertText {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  h1 {
+    font-size: 1.4rem;
+  }
+}
+
+#myImg {
+  border-radius: 0.4rem;
+  width: 140px;
+  height: 140px;
+  margin: 1rem 0;
+}

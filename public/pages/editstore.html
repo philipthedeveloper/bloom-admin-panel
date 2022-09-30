@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taskinger</title>
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <script src="/static/js/editStore.js" defer></script>
+  </head>
+  <body>
+    <div class="edit_header">
+      <a href="/store">Go Back</a>
+      <h1>Edit task page</h1>
+    </div>
+
+    <!-- Add task form -->
+    <form action="" method="" id="update_task_form">
+      <div class="form_group">
+        <label for="name">name</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Enter task name"
+        />
+      </div>
+
+      <div class="form_group">
+        <label for="description">description</label>
+        <textarea
+          name="description"
+          id="description"
+          cols="30"
+          rows="10"
+          placeholder="Enter task description"
+          maxlength="200"
+        ></textarea>
+      </div>
+
+      <div class="form_group">
+        <label for="imgUrl">imgUrl</label>
+        <input
+          type="text"
+          imgUrl="imgUrl"
+          id="imgUrl"
+          placeholder="Enter task imgUrl"
+        />
+      </div>
+
+      <div class="form_group">
+        <label for="compamy">company</label>
+        <select name="company" id="company">
+          <option value="nike">nike</option>
+          <option value="adidas">adidas</option>
+          <option value="gucci">gucci</option>
+          <option value="versace">versace</option>
+          <option value="fendi">fendi</option>
+          <option value="philipplein">philipplein</option>
+          <option value="balenciaga">balenciaga</option>
+          <option value="louis vuitton">louis vuitton</option>
+          <option value="palm angels">palm angels</option>
+        </select>
+      </div>
+
+      <div class="form_group">
+        <button type="submit">Save Product</button>
+      </div>
+    </form>
+  </body>
+</html>
