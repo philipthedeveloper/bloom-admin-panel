@@ -38,7 +38,7 @@ const productCardContructor = ({ _id, name, description, imgUrl, company }) => {
 
 const productsGenerator = (data) => {
   if (data.length == 0)
-    return (taskContainer.innerHTML = `<p style="color: white; font-size: 0.9rem; text-align: center">No task found in collection</p>`);
+    return (productContainer.innerHTML = `<p style="color: white; font-size: 0.9rem; text-align: center">No Product found in collection</p>`);
   const list = data.map((product) => productCardContructor(product));
   productContainer.innerHTML = list;
   deleteTaskBtn = document.querySelectorAll(".delete_task");
